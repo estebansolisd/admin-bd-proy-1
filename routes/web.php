@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/oficinas', 'OficinaController@getOficinas')->name('get-oficinas');
+Route::get('/coches', 'CocheController@getCoches')->name('get-coches');
+Route::post('/coches', 'CocheController@saveCoches')->name('post-coches');
+Route::patch('/coches/{coche}', 'CocheController@updateCoches')->name('patch-coches');
+Route::delete('/coches/{coche}', 'CocheController@deleteCoches')->name('delete-coches');
